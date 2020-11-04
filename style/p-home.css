@@ -1,5 +1,4 @@
 /* 추천 음료 공통 */
-/* 바운스 애니메이션 */
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -10,20 +9,14 @@
   }
 }
 
-/* 추천 음료 컨테이너 */
 .ediya-recommend-container {
   background-color: var(--theme-bright);
 }
 
-/* 추천 음료 섹션 */
 .ediya-recommend {
-  color: var(--theme-default);
   background-color: var(--theme-secondary);
+  color: var(--theme-default);
   text-align: center;
-}
-
-.ediya-recommend-text {
-  font-size: 1.4rem;
 }
 
 .ediya-recommend-text[lang='en'] {
@@ -32,18 +25,21 @@
 
 .ediya-recommend-text[lang='en']::after {
   content: "";
-  width: 40px;
-  border-top: 1px solid var(--theme-primary);
   display: inline-block;
+  width: 40px;
+  border: 1px solid var(--theme-default);
+}
+
+.ediya-recommend-text {
+  font-size: 1.4rem;
 }
 
 .ediya-recommend-text em {
-  color: var(--theme-primary);
   font-style: normal;
+  color: var(--theme-primary);
   font-weight: 700;
 }
 
-/* 추천 음료 리스트 */
 .ediya-recommend-list {
   position: relative;
 }
@@ -53,17 +49,16 @@
 }
 
 .ediya-recommend-beverage img {
+  animation: bounce 400ms infinite alternate ease-in-out;
   max-width: 100%;
   height: auto;
-  animation: bounce 0.4s ease-in-out infinite alternate;
 }
 
 .ediya-recommend-beverage:last-child img {
-  animation-delay: 0.2s;
+  animation-delay: 200ms;
 }
 
-/* 메뉴보기 링크 */
-.go-menu {
+.ediya-recommend .go-menu {
   position: relative;
   display: inline-block;
   padding: 8px 24px;
@@ -71,29 +66,18 @@
   border: 1px solid currentColor;
 }
 
-/* 유튜브 영상 섹션 */
 .ediya-youtube-wrapper {
   margin: 0;
-  /* width: 100%;
-  height: 56.25vw; */
 }
 
 .iframe-wrapper {
   width: 100%;
   padding-top: 56.25%;
-  height: 0 !important;
   position: relative;
 }
 
-.irame4-3 {
-  padding-top: 75%;
-}
-
-.irame16-9 {
-  padding-top: 56.25%;
-}
-
 .iframe-wrapper iframe {
+  margin: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -101,11 +85,14 @@
   height: 100%;
 }
 
-/* 공지사항 섹션 */
+.iframe16-9 {
+  padding-top: 56.25%;
+}
+
 .ediya-notice {
-  position: relative;
   display: flex;
   flex-flow: row nowrap;
+  position: relative;
 }
 
 .ediya-notice-headline,
@@ -119,15 +106,16 @@
   background: var(--theme-primary) linear-gradient(137deg,
       var(--color-gradient-start) 5%,
       var(--color-gradient-end) 100%);
+  font-size: 1.6rem;
   color: var(--theme-bright);
   font-weight: 700;
   margin: 0;
-  font-size: 1.6rem;
+
 }
 
 .ediya-notice__article {
+  background-color: var(--theme-bright);
   flex-grow: 1;
-  background: var(--theme-bright);
 }
 
 .ediya-notice__article-headline {
@@ -144,14 +132,15 @@
 
 .ediya-notice__article-text {
   font-size: 1.3rem;
-  margin: 10px 0 0;
+  color: var(--theme-default);
   line-height: 1.5;
+  margin: 10px 0 0;
 }
 
-.ediya-notice .button-container {
+.button-container {
   position: absolute;
-  left: 84px;
-  bottom: 10px;
+  left: 80px;
+  top: 70%;
 }
 
 .ediya-notice .button {
@@ -159,35 +148,35 @@
   padding: 0;
 }
 
-/* 이디야 뉴스 섹션 */
 .ediya-news {
-  background-color: var(--theme-primary);
-  color: var(--theme-bright);
+  background: var(--theme-primary);
   padding: 15px;
+  color: var(--theme-bright);
   position: relative;
 }
 
 .ediya-news-headline {
-  font-weight: 700;
-  margin: 0;
+  margin: 0 0 15px;
+  ;
   font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .ediya-news-list {
-  margin: 15px 0 0;
+  line-height: 1.5;
 }
 
-.ediya-news-list li {
+.ediya-news-item {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
 }
 
-.ediya-news-subject {
+.ediya-news-list a {
   width: 72.5%;
+  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .ediya-news .icon-more {
@@ -196,10 +185,37 @@
   right: 15px;
 }
 
+.app-footer-container {
+  background: var(--theme-default);
+  color: var(--theme-disable);
+  text-align: center;
+  font-size: 1.2rem;
+  position: relative;
+  padding: 15px 0;
+}
+
+.footer-brand {
+  position: absolute;
+  top: 0;
+}
+
+.guide-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.guide-list::after {
+  content: "";
+  border: 1px solid currentColor;
+  display: block;
+  width: 100%;
+}
+
+
 
 @media all and (max-width: 767px) {
 
-  /* 모바일 추천 음료 */
+  /* 모바일 */
   .ediya-recommend-container {
     padding-bottom: 195px;
   }
@@ -235,7 +251,7 @@
 
 @media all and (min-width: 768px) {
 
-  /* 데스크탑 추천 음료 */
+  /* 데스크탑 */
   .ediya-recommend-container {
     padding-bottom: 245px;
   }
@@ -254,7 +270,8 @@
 
   .ediya-recommend-text[lang='en']::after {
     display: block;
-    margin: 30px auto 0;
+    margin: auto;
+    margin-top: 30px;
   }
 
   .ediya-recommend-list {
@@ -277,10 +294,10 @@
 
   .ediya-section-container {
     background: var(--theme-bright2);
+    padding: 85px 0;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    padding: 85px 0;
   }
 
   .ediya-youtube {
@@ -289,7 +306,6 @@
 
   .ediya-inform-container {
     width: 400px;
-
   }
 
 }
