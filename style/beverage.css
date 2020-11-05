@@ -1,0 +1,263 @@
+/* 공통 음료 목록 */
+.ediya-menu {
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* 공통 음료 아이템 */
+.ediya-menu__item {
+  width: 100%;
+  height: 400px;
+  background-color: var(--theme-bright2);
+  margin-top: 20px;
+  position: relative;
+}
+
+.ediya-menu__item:first-child {
+  margin-top: 0;
+}
+
+.ediya-menu__item [role='button'] {
+  display: block;
+}
+
+.ediya-menu__item figure {
+  margin: 0;
+  padding: 20px 0 40px;
+  text-align: center;
+}
+
+.ediya-menu__item img {
+  transform: scale(0.85);
+  transition: all 0.2s;
+}
+
+.ediya-menu__item [role='button']:hover img {
+  transform: scale(1);
+}
+
+/* 공통 음료 상세정보 */
+.ediya-menu__item--detail {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  padding: 40px 20px;
+  border: 1px solid var(--theme-dark);
+}
+
+.ediya-menu__item--name {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--theme-dark);
+}
+
+.ediya-menu__item--name [lang="en"] {
+  display: block;
+  color: var(--theme-disable);
+  font-size: 1.4rem;
+}
+
+.ediya-menu__item--multi-column {
+  background-color: #eee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  column-count: 2;
+  column-rule: 1px solid #0f0f0f;
+  padding: 10px 0;
+}
+
+.ediya-menu__item--multi-column dl {
+  font-size: 0;
+  margin-top: 0;
+  padding-bottom: 15px;
+}
+
+.ediya-menu__item--multi-column dt,
+.ediya-menu__item--multi-column dd {
+  display: inline-block;
+  width: 50%;
+  font-size: 1.3rem;
+  text-indent: 20px;
+  margin-top: 15px;
+}
+
+.ediya-menu__item--multi-column dd {
+  margin-left: 0;
+}
+
+.ediya-menu__item--detail .is-close-panel {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+
+
+/* .ediya-menu__item--detail {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 30px 20px 10px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.ediya-menu__item--name {
+  font-weight: 400;
+}
+
+.ediya-menu__item--name [lang="en"] {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--theme-disable);
+  font-weight: 100;
+}
+
+.ediya-menu__item--name::after {
+  content: "";
+  width: 100%;
+  border: 1px solid currentColor;
+  display: inline-block;
+}
+
+.ediya-menu__item--multi-column {
+  background: skyblue;
+  margin-top: 100px;
+  column-count: 2;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.ediya-menu__item--multi-column dt {
+background: pink;
+display: inline-block;
+width: 30%;
+margin-bottom: 10px;
+white-space: nowrap;
+
+}
+
+.ediya-menu__item--multi-column dd {
+background: red;
+display: inline-block;
+width: 30%;
+white-space: nowrap;
+
+}
+
+.ediya-menu__item .is-close-panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+} */
+
+
+@media all and (min-width: 768px) {
+
+  /* 데스크탑 읍료 목록 */
+  .ediya-menu {
+    width: 740px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+  }
+
+  .ediya-menu__item {
+    width: 360px;
+  }
+
+  .ediya-menu__item:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
+
+
+
+/* .ediya-menu {
+  background: yellow;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.ediya-menu__item {
+  background: var(--theme-bright2);
+  margin: 10px;
+  padding: 20px 10px;
+  width: 100%;
+}
+
+.ediya-menu__item figcaption {
+  margin: 30px 0;
+}
+
+.ediya-menu__item--detail {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: left;
+}
+
+.ediya-menu__item--multi-column {
+  background: green;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.ediya-menu__item--name {
+  font-weight: 400;
+}
+
+.ediya-menu__item--name [lang="en"] {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 100;
+  color: var(--theme-disable);
+}
+
+.ediya-menu__item--name::after {
+  content: "";
+  width: 100%;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+@media all and (min-width: 768px) {
+  .ediya-menu {
+    width: 768px;
+    margin: 0 auto;
+  }
+  .ediya-menu__item {
+    width: 45%;
+    height: auto;
+  }
+
+  .ediya-menu__item img {
+    width: 100%;
+    height: 100%;
+  }
+
+} */

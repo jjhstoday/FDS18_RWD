@@ -3,5 +3,6 @@
 @import url(./variable.css);
 @import url(./default.css);
 @import url(./component.css);
-@import url(./common.css);
+@import url(./p-common.css);
 @import url(./p-home.css);
+@import url(./p-member.css);

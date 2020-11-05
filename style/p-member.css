@@ -1,16 +1,14 @@
-/* 공통 멤버 섹션 */
 .member {
   padding: 120px 32px 50px;
   color: var(--theme-bright3);
   background: #000 url(../images/coffee-mobile.jpg) no-repeat 50% 0;
 }
 
-/* 공통 로그인 제목 및 단락 디자인 */
 .member-headline,
 .member-text {
-  line-height: 1.5;
   margin: 0;
   text-align: center;
+  line-height: 1.5;
 }
 
 .member-headline {
@@ -28,12 +26,10 @@
   font-size: 1.2rem;
 }
 
-/* 공통 로그인 및 회원가입 폼 */
 .member-form {
   margin-top: 120px;
 }
 
-/* 공통 멤버 아이디 패스워드 입력 서식 */
 .member-id,
 .member-password {
   position: relative;
@@ -54,14 +50,14 @@
   left: 0.5em;
   top: 15px;
   font-size: 1.8rem;
-  transition: all 0.2s;
+  /* transition: all 0.2s; */
 }
 
 .member-id input,
 .member-password input {
   width: 100%;
   height: 48px;
-  background-color: transparent;
+  background: transparent;
   border: 0;
   color: #fff;
   padding: 0 1em;
@@ -87,16 +83,17 @@
 }
 
 /* 공통 멤버 폼 상태 디자인 
-    (is--focus, is--valid, is-invalid, is-visible) */
+   (is--focus, is--valid, is--invalid, is--visible) */
 .is--focus label,
 .is--valid label,
-.is--invalid label {
-  font-size: 1.3rem;
+.is--invallid label {
   transform: translate(-0.5em, -15px);
+  font-size: 1.3rem;
 }
 
 .member-form .is--invalid {
   height: 70px;
+  /* background: yellow; */
 }
 
 .member-form .is--invalid [role="alert"] {
@@ -124,7 +121,6 @@
 
 .member-form .button-password .ir {
   display: block;
-  /* padding: 4px; */
   width: inherit;
   height: inherit;
   background: url(../images/icon-visible.svg) no-repeat 50% 50%;
@@ -139,7 +135,15 @@
 }
 
 
-/* 공통 이메일 저장 */
+
+
+
+
+
+
+
+
+
 .save-email {
   position: relative;
   display: flex;
@@ -170,11 +174,10 @@
 }
 
 .save-email label {
-  margin-left: 0.5em;
   cursor: pointer;
+  margin-left: 0.5em;
 }
 
-/* 공통 로그인/회원가입 버튼 및 링크 */
 .member-form .button-container {
   user-select: none;
   margin-top: 155px;
@@ -184,6 +187,7 @@
 .button-stroke {
   position: relative;
   display: block;
+  text-align: center;
   width: 100%;
   height: 48px;
   line-height: 48px;
@@ -191,7 +195,6 @@
   font-size: 2rem;
   font-weight: 700;
   border-radius: 8px;
-  text-align: center;
 }
 
 .button-fill::after,
@@ -199,8 +202,8 @@
   content: "";
   position: absolute;
   top: 50%;
-  right: 14px;
   transform: translateY(-50%);
+  right: 14px;
   width: 20px;
   height: 20px;
   background-repeat: no-repeat;
@@ -219,10 +222,10 @@
 }
 
 .button-stroke {
-  opacity: 0.7;
   border: 1px solid var(--theme-bright3);
+  opacity: 0.7;
   color: var(--theme-bright2);
-  background-color: transparent;
+  background-color: transparnet;
 }
 
 .button-stroke:hover,
@@ -237,24 +240,17 @@
 
 
 
-
-
-
-
-/* 데스크탑 멤버 섹션 */
 @media all and (min-width: 768px) {
   .member {
     background-image: url(../images/coffee-desktop.jpg);
   }
 
-  /* 데스크탑 멤버 폼 */
   .member-form {
     width: 540px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* 데스크탑 로그인/회원가입 버튼 및 링크  */
   .member-form .button-container {
     display: flex;
     flex-flow: row nowrap;
@@ -265,5 +261,6 @@
   .member-form .button-stroke {
     width: 260px;
   }
+
 
 }

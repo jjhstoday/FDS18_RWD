@@ -137,11 +137,11 @@
   margin: 10px 0 0;
 }
 
-.button-container {
+/* .button-container {
   position: absolute;
   left: 80px;
   top: 70%;
-}
+} */
 
 .ediya-notice .button {
   background-color: transparent;
@@ -185,31 +185,7 @@
   right: 15px;
 }
 
-.app-footer-container {
-  background: var(--theme-default);
-  color: var(--theme-disable);
-  text-align: center;
-  font-size: 1.2rem;
-  position: relative;
-  padding: 15px 0;
-}
 
-.footer-brand {
-  position: absolute;
-  top: 0;
-}
-
-.guide-list {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.guide-list::after {
-  content: "";
-  border: 1px solid currentColor;
-  display: block;
-  width: 100%;
-}
 
 
 
