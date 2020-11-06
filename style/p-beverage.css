@@ -1,15 +1,13 @@
-/* 공통 음료 목록 */
 .ediya-menu {
   padding: 20px;
   display: flex;
   flex-flow: row wrap;
 }
 
-/* 공통 음료 아이템 */
 .ediya-menu__item {
   width: 100%;
   height: 400px;
-  background-color: var(--theme-bright2);
+  background: var(--theme-bright2);
   margin-top: 20px;
   position: relative;
 }
@@ -18,14 +16,10 @@
   margin-top: 0;
 }
 
-.ediya-menu__item [role='button'] {
-  display: block;
-}
-
 .ediya-menu__item figure {
+  text-align: center;
   margin: 0;
   padding: 20px 0 40px;
-  text-align: center;
 }
 
 .ediya-menu__item img {
@@ -33,19 +27,17 @@
   transition: all 0.2s;
 }
 
-.ediya-menu__item [role='button']:hover img {
+.ediya-menu__item:hover img {
   transform: scale(1);
 }
 
-/* 공통 음료 상세정보 */
 .ediya-menu__item--detail {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.85);
   position: absolute;
-  z-index: 10;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
   padding: 40px 20px;
   border: 1px solid var(--theme-dark);
 }
@@ -60,25 +52,25 @@
 
 .ediya-menu__item--name [lang="en"] {
   display: block;
-  color: var(--theme-disable);
   font-size: 1.4rem;
+  color: var(--theme-disable);
 }
 
 .ediya-menu__item--multi-column {
-  background-color: #eee;
+  background: var(--theme-bright2);
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  column-count: 2;
-  column-rule: 1px solid #0f0f0f;
+  /* width: 100%; */
   padding: 10px 0;
+  column-count: 2;
+  column-rule: 1px solid var(--theme-dark);
 }
 
 .ediya-menu__item--multi-column dl {
   font-size: 0;
-  margin-top: 0;
   padding-bottom: 15px;
+  /* margin-top: 0; */
 }
 
 .ediya-menu__item--multi-column dt,
@@ -92,26 +84,25 @@
 
 .ediya-menu__item--multi-column dd {
   margin-left: 0;
+
 }
 
-.ediya-menu__item--detail .is-close-panel {
-  border: 0;
-  background: transparent;
-  cursor: pointer;
+.is-close-panel {
   position: absolute;
   top: 20px;
   right: 20px;
+  background: transparent;
+  border: 0;
+  /* cursor: pointer; */
 }
 
-@media all and (min-width: 768px) {
 
-  /* 데스크탑 읍료 목록 */
+@media all and (min-width: 768px) {
   .ediya-menu {
     width: 740px;
     padding-left: 0;
     padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     justify-content: space-between;
   }
 
@@ -122,4 +113,5 @@
   .ediya-menu__item:nth-child(2) {
     margin-top: 0;
   }
+
 }

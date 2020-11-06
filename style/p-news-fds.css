@@ -1,0 +1,154 @@
+.news__notice {
+  padding: 10px;
+}
+
+.news-headline {
+  margin: 0;
+  color: var(--theme-primary);
+}
+
+.news-headline::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon-news-headline.svg) no-repeat 50% 50%;
+}
+
+.press-search-container {
+  display: flex;
+  flex-flow: row nowrap;
+  border-bottom: 1px solid #000;
+  margin-left: 85px;
+  position: relative;
+  padding: 4px;
+}
+
+.press-search-container select {
+  background: var(--theme-bright2);
+  border: 0;
+  border-radius: 3px;
+  width: 80px;
+  padding: 2px;
+  position: absolute;
+  top: 0;
+  left: -85px;
+}
+
+.press-search-container input {
+  background: transparent;
+  border: 0;
+  flex-grow: 1;
+  text-indent: 0.5em;
+}
+
+.press-search-container button {
+  background: url(../images/icon-search.svg) no-repeat 50% 50%;
+  width: 20px;
+  height: 20px;
+  border: 0;
+}
+
+.news__press-table {
+  margin-top: 20px;
+  border-spacing: 0;
+  border-top: 2px solid var(--theme-primary);
+  border-bottom: 2px solid var(--theme-primary);
+}
+
+.news__press-table th,
+.news__press-table td {
+  padding: 15px;
+}
+
+.news__press-table th {
+  white-space: nowrap;
+  font-size: 1.5rem;
+  color: var(--theme-primary);
+}
+
+.news__press-table td {
+  border-top: 1px solid var(--theme-primary);
+  font-size: 1.3rem;
+  color: var(--theme-primary);
+  vertical-align: top;
+}
+
+.press-article {
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: line;
+  overflow: hidden;
+  width: 100%;
+}
+
+.press-article dt {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.press-article dd {
+  margin-left: 0;
+  color: var(--theme-disable);
+}
+
+.press-thumbnail {
+  display: none;
+}
+
+.press-date {
+  display: inline-block;
+}
+
+.pagination-container,
+.pagination {
+  background: yellow;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 30px;
+}
+
+.pagination-container .button {
+  background: transparent;
+}
+
+.pagination {
+  margin: 0 20px;
+}
+
+.pagination ._pagerNo {
+  margin: 0 5px;
+}
+
+
+
+
+
+@media all and (min-width: 768px) {
+  .news__notice {
+    width: 740px;
+    margin: 0 auto;
+  }
+
+  .press-search-container {
+    margin-left: 50%;
+  }
+
+  .news__press-table td:nth-child(2) {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .press-thumbnail {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .press-article {
+    width: 80%;
+  }
+
+  
+}
